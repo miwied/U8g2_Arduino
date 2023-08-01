@@ -25131,7 +25131,7 @@ class U8G2_BITMAP : public U8G2 {
 };
 
 // modified constructor to expose the clock/data pin fields...
-class U8G2_SSD1322_NHD_256X64_F_4W_HW_SPI : public U8G2 {
+class U8G2_SSD1322_NHD_256X64_F_4W_HW_SPI_MW : public U8G2 {
   public: U8G2_SSD1322_NHD_256X64_F_4W_HW_SPI(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) : U8G2() {
     u8g2_Setup_ssd1322_nhd_256x64_f(&u8g2, rotation, u8x8_byte_arduino_hw_spi, u8x8_gpio_and_delay_arduino);
     u8x8_SetPin_4Wire_SW_SPI(getU8x8(), clock, data, cs, dc, reset);		// YES, we're using the "SW" pin constructor.  Only difference between "SW" and "HW" is that "HW" doesn't expose the rest of the pin setup fields
